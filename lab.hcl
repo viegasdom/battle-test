@@ -13,6 +13,10 @@ resource "layout" "main" {
 resource "page" "intro" {
   title = "Getting Started"
   file  = "instructions/intro.md"
+
+  activities = {
+    "create_file" = resource.task.create_file
+  }
 }
 
 resource "lab" "battle_test" {
@@ -33,10 +37,6 @@ resource "lab" "battle_test" {
 
       page "intro" {
         reference = resource.page.intro
-
-        activities = {
-          "create_file" = resource.task.create_file
-        }
       }
     }
   }

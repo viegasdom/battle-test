@@ -16,5 +16,5 @@ resource "container" "ubuntu" {
 
 resource "exec" "setup_env" {
   target = resource.container.ubuntu
-  script = file("scripts/setup/init.sh")
+  script = "scripts/setup/init.sh"
 }

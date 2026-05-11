@@ -18,3 +18,8 @@ resource "exec" "setup_env" {
   target = resource.container.ubuntu
   script = "scripts/setup/init.sh"
 }
+
+resource "exec" "setup_env_2" {
+  target = resource.container.ubuntu
+  script = "scripts/setup/init.sh"
+}

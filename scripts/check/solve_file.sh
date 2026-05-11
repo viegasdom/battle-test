@@ -1,3 +1,3 @@
 #!/bin/bash
 set -e
-echo "hello world" > /tmp/hello
+echo "hello world!" > /tmp/hello
